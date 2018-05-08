@@ -1,0 +1,17 @@
+Cache lab stuff
+
+valgrind --log-fd=1 --tool=lackey -v --trace-mem=yes ls -l
+
+outputs =>
+I 0400d7d4,8
+ M 0421c7f0,4
+ L 04f6b868,8
+ S 7ff0005c8,8
+
+“I” denotes an instruction load
+ “L” a data load,
+ “S” a data store
+ “M” a data modify
+
+We want to ignore lines tartign with "I"
+Do FGETS google that goodness...
